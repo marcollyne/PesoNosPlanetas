@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
  */
 public class Tela extends javax.swing.JFrame {
 
-    String a[] = new String[]{"","Lua", "Júpiter ", "Marte ", "Mercúrio", "Netuno", "Plutão",
+    String a[] = new String[]{"--", "Lua", "Júpiter ", "Marte ", "Mercúrio", "Netuno", "Plutão",
         "Saturno", "Urano", "Vênus"};
 
     public Tela() {
@@ -58,9 +58,9 @@ public class Tela extends javax.swing.JFrame {
 
         jcbPlanetas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jcbPlanetas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jcbPlanetas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jcbPlanetasMouseClicked(evt);
+        jcbPlanetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbPlanetasActionPerformed(evt);
             }
         });
 
@@ -206,11 +206,77 @@ public class Tela extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jtfPesoKeyTyped
 
-    private void jcbPlanetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcbPlanetasMouseClicked
-        
+    private void jcbPlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbPlanetasActionPerformed
+        jlPlanetaVariante.removeAll();
+
+        switch (jcbPlanetas.getSelectedIndex()) {
+            case 0: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/preto.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+
+            case 1: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/lua.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 2: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/jupiter.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 3: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/marte.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 4: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/mercurio.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 5: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/netuno.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 6: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/plutao.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 7: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/saturno.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 8: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/urano.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            case 9: {
+                jlPlanetaVariante.removeAll();
+                ImageIcon img = new ImageIcon("src/pictures/venus.png");
+                jlPlanetaVariante.setIcon(img);
+                break;
+            }
+            default:
+                break;
+        }
 
 
-    }//GEN-LAST:event_jcbPlanetasMouseClicked
+    }//GEN-LAST:event_jcbPlanetasActionPerformed
 
     /**
      * @param args the command line arguments
