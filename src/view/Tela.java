@@ -53,7 +53,6 @@ public class Tela extends javax.swing.JFrame {
         jlPlanetaVariante = new javax.swing.JLabel();
         jlTexto = new javax.swing.JLabel();
         jlPeso = new javax.swing.JLabel();
-        jlSeta = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -119,9 +118,6 @@ public class Tela extends javax.swing.JFrame {
         jlPeso.setText("0.000");
         jlPeso.setPreferredSize(new java.awt.Dimension(60, 20));
 
-        jlSeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/seta.gif"))); // NOI18N
-        jlSeta.setPreferredSize(new java.awt.Dimension(90, 60));
-
         javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
         background1.setLayout(background1Layout);
         background1Layout.setHorizontalGroup(
@@ -143,9 +139,7 @@ public class Tela extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jlSeta, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
+                        .addGap(167, 167, 167)))
                 .addComponent(jlPlanetaVariante, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(86, 86, 86))
             .addGroup(background1Layout.createSequentialGroup()
@@ -175,13 +169,8 @@ public class Tela extends javax.swing.JFrame {
                         .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jcbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(background1Layout.createSequentialGroup()
-                                .addGap(111, 111, 111)
-                                .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(background1Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jlSeta, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(111, 111, 111)
+                        .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -206,7 +195,6 @@ public class Tela extends javax.swing.JFrame {
             case 0: {
                 ImageIcon img = new ImageIcon("src/pictures/transparente.gif");
                 ImageIcon seta = new ImageIcon("src/pictures/transparente.gif");
-                jlSeta.setIcon(seta);
                 jlPlanetaVariante.setIcon(img);
                 jlPeso.setText("");
                 jlTexto.setText("");
@@ -226,8 +214,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/lua.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso na Lua é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -248,8 +234,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/jupiter.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Júpiter é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -270,8 +254,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/marte.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Marte é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -292,8 +274,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/mercurio.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Mercúrio é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -314,8 +294,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/netuno.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Netuno é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -336,8 +314,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/plutao.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Plutão é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -358,8 +334,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/saturno.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Saturno é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -380,8 +354,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/urano.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Urano é: ");
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
@@ -403,8 +375,6 @@ public class Tela extends javax.swing.JFrame {
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/venus.png");
                     jlPlanetaVariante.setIcon(img);
-                    ImageIcon seta = new ImageIcon("src/pictures/seta.gif");
-                    jlSeta.setIcon(seta);
                     jlTexto.setText("Seu peso em Vênus é: ");
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.88;
@@ -466,7 +436,6 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jcbPlanetas;
     private javax.swing.JLabel jlPeso;
     private javax.swing.JLabel jlPlanetaVariante;
-    private javax.swing.JLabel jlSeta;
     private javax.swing.JLabel jlTerra;
     private javax.swing.JLabel jlTexto;
     private javax.swing.JTextField jtfPeso;
