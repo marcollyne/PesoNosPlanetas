@@ -23,8 +23,8 @@ public class Tela extends javax.swing.JFrame {
 
     public Tela() {
         initComponents();
-        jlTexto.setText("");
-        jlPeso.setText("");
+        jlTexto.setVisible(false);
+        jlPeso.setVisible(false);
         iniciaLista();
     }
 
@@ -122,10 +122,17 @@ public class Tela extends javax.swing.JFrame {
         background1.setLayout(background1Layout);
         background1Layout.setHorizontalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
+            .addGroup(background1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
                 .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background1Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                        .addComponent(jlTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55))
+                    .addGroup(background1Layout.createSequentialGroup()
                         .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(background1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -135,19 +142,9 @@ public class Tela extends javax.swing.JFrame {
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jtfPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(167, 167, 167)))
-                .addComponent(jlPlanetaVariante, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86))
-            .addGroup(background1Layout.createSequentialGroup()
-                .addGap(71, 254, Short.MAX_VALUE)
-                .addComponent(jlTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                        .addGap(67, 67, 67)
+                        .addComponent(jlPlanetaVariante, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,8 +156,9 @@ public class Tela extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background1Layout.createSequentialGroup()
+                        .addGap(0, 21, Short.MAX_VALUE)
                         .addComponent(jlPlanetaVariante, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                        .addGap(64, 64, 64)
                         .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlTexto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jlPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -169,9 +167,9 @@ public class Tela extends javax.swing.JFrame {
                         .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jcbPlanetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(111, 111, 111)
-                        .addComponent(jlTerra, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jlTerra)
+                        .addGap(116, 116, 116))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,11 +191,10 @@ public class Tela extends javax.swing.JFrame {
 
         switch (jcbPlanetas.getSelectedIndex()) {
             case 0: {
-                ImageIcon img = new ImageIcon("src/pictures/transparente.gif");
-                ImageIcon seta = new ImageIcon("src/pictures/transparente.gif");
-                jlPlanetaVariante.setIcon(img);
-                jlPeso.setText("");
-                jlTexto.setText("");
+
+                jlPlanetaVariante.setVisible(false);
+                jlPeso.setVisible(false);
+                jlTexto.setVisible(false);
 
                 break;
             }
@@ -206,15 +203,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/lua.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso na Lua é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.17;
@@ -226,15 +226,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/jupiter.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Júpiter é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 2.64;
@@ -246,15 +249,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/marte.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Marte é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.38;
@@ -266,15 +272,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/mercurio.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Mercúrio é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.37;
@@ -286,15 +295,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/netuno.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Netuno é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 1.18;
@@ -306,15 +318,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/plutao.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Plutão é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.11;
@@ -326,15 +341,18 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/saturno.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Saturno é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
 
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 1.15;
@@ -346,16 +364,19 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/urano.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Urano é: ");
-
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
+                    
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 1.17;
                     jlPeso.setText(String.valueOf(df.format(calc)) + " Kg");
@@ -367,15 +388,19 @@ public class Tela extends javax.swing.JFrame {
                 if (jtfPeso.getText().trim().isEmpty()) {
                     JOptionPane.showMessageDialog(this, "Digite seu peso, por favor", "Atenção", JOptionPane.INFORMATION_MESSAGE);
                     jcbPlanetas.setSelectedIndex(0);
-                    jlPeso.setText("");
-                    jlTexto.setText("");
-                    jlPlanetaVariante.setIcon(new ImageIcon("src/pictures/transparente.gif"));
+                    jlPlanetaVariante.setVisible(false);
+                    jlPeso.setVisible(false);
+                    jlTexto.setVisible(false);
                     break;
 
                 } else {
                     ImageIcon img = new ImageIcon("src/pictures/venus.png");
                     jlPlanetaVariante.setIcon(img);
                     jlTexto.setText("Seu peso em Vênus é: ");
+                    jlPlanetaVariante.setVisible(true);
+                    jlPeso.setVisible(true);
+                    jlTexto.setVisible(true);
+                    
                     p = Double.parseDouble(jtfPeso.getText().replaceAll(",", "."));
                     calc = p * 0.88;
                     jlPeso.setText(String.valueOf(df.format(calc)) + " Kg");
